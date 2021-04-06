@@ -6,8 +6,8 @@ const Stage = (props)=>{
         <div className="stage-main">
              
              {props?.apiGetData?.map(item=>item.id == props.selectOp ? 
-            <div className="child-p">
-                 {item.stages.map(item => <div className="card ">
+            <div key={item.id} className="child-p">
+                 {item.stages.map((item, index) => <div key={index} className="card ">
                      <div className="card-parent-circle">
                          <div className="arrow-down"></div>
                          <div className="cicle-down"></div>
